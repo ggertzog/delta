@@ -1,50 +1,55 @@
-# React + TypeScript + Vite
+# Установка
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1.  Склонировать репозиторий
+2.  Установить зависимоcти командой:
 
-Currently, two official plugins are available:
+    `yarn install`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Скрипты
 
-## Expanding the ESLint configuration
+- Дев сервер  
+  `yarn dev`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Превью  
+  `yarn preview`
 
-- Configure the top-level `parserOptions` property like this:
+- Билд  
+  `yarn build`
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Форматирование prettier.
+  `yarn prettier`
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Запуск eslint  
+  `yarn lint`
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Также это выполняется перед каждым коммитом при помощи pre-commit хуков. Чтобы проверить, работают ли пре-коммит хуки, нужно открыть любой ts/tsx файл, оставить там `;;` на последней строке, запустить `git commit`. Должен сработать хук, и преттиер должен убрать эти `;;`. Если не работает, то это важно пофиксить, а не то мы погрязнем в мерж-конфликтах.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## editorconfig
+
+Нужно установить плагин editorconfig для IDE. Чтобы проверить работает он или нет: в любом файле удалить последнюю пустую строку и нажать Ctrl+S. Если editorconfig работает, то пустая строка должна появиться опять. Если не появилась, то это значит, что editorconfig не работает, и надо его чинить. Это важно чинить, иначе будет много мерж-конфликтов.
+
+## Структура папок
+
+### app
+
+Папка app является корневой папкой проекта и содержит все основные файлы и папки, связанные с приложением.
+
+### pages
+
+Папка pages содержит все компоненты уровня страницы приложения. Каждый компонент страницы представляет отдельный экран или страницу приложения и отвечает за отображение элементов пользовательского интерфейса и обработку пользовательских взаимодействий для этой страницы.
+
+### widgets
+
+Папка widgets содержит повторно используемые компоненты пользовательского интерфейса, которые используются внутри компонентов страниц для отображения конкретных функций или возможностей. Эти виджеты обычно имеют меньший объем по сравнению с компонентами и могут легко повторно использоваться на разных страницах.
+
+### features
+
+Папка features содержит самостоятельные модули или функции приложения. Каждая папка функции включает все необходимые файлы и подпапки для реализации определенной функции или возможности приложения.
+
+### entities
+
+Папка entities содержит модели данных или сущности, представляющие структуру данных приложения.
+
+### shared
+
+Папка shared содержит общие утилиты, константы, перечисления и другие общие файлы, которые используются в различных частях приложения. Эти файлы обычно не связаны с пользовательским интерфейсом и предоставляют функциональность или данные, которые используются в различных компонентах, страницах или функциях.

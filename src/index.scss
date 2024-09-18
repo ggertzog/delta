@@ -1,0 +1,139 @@
+/* colors */
+@use 'sass:color';
+
+$error: #ce2727;
+$error-opacity-8: color.scale(#ce2727, $lightness: 92%);
+$error-opacity-40: color.scale(#ce2727, $lightness: 60%);
+$green: #49ce27;
+$black: #202020;
+$passive-text: #8394a4;
+$passive-text-dark: #4b5768;
+$passive: #dde7f0;
+$almost-white: #f5f5f5;
+$white: #fff;
+$blue-standard: #65d6e3;
+$blue-light: #a5e8f4;
+$blue-light-opacity-40: color.scale(#a5e8f4, $lightness: 60%);
+$blue-very-light: #c9f0f5;
+$blue-medium: #33b6c8;
+$blue-dark: #1f8f9e;
+$gray: #555;
+$almost-white-main: #f2f7fc;
+$gray-light: #5f5f5f;
+
+/* fonts */
+@import 'https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap';
+
+$font-stack: 'Ubuntu', sans-serif;
+
+@mixin font($fz, $fw, $lh) {
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+%xxxl-txt-medium {
+  @include font($fz: 32px, $fw: 500, $lh: 1.38);
+}
+
+%xxl-txt-bold {
+  @include font($fz: 24px, $fw: 700, $lh: 1.17);
+}
+
+%xl-txt-regular {
+  @include font($fz: 20px, $fw: 400, $lh: 1.3);
+}
+
+%xl-txt-medium {
+  @include font($fz: 20px, $fw: 500, $lh: 1.3);
+}
+
+%xl-txt-bold {
+  @include font($fz: 20px, $fw: 700, $lh: 1.3);
+}
+
+%link-text {
+  @include font($fz: 18px, $fw: 500, $lh: 1.33);
+}
+
+%l-txt-regular {
+  @include font($fz: 18px, $fw: 400, $lh: 1.22);
+}
+
+%l-txt-bold {
+  @include font($fz: 18px, $fw: 700, $lh: 1.22);
+}
+
+%main-regular {
+  @include font($fz: 16px, $fw: 400, $lh: 1.5);
+}
+
+%main-medium {
+  @include font($fz: 16px, $fw: 500, $lh: 1.25);
+}
+
+%main-bold {
+  @include font($fz: 16px, $fw: 700, $lh: 1.25);
+}
+
+%txt-main-medium {
+  @include font($fz: 48px, $fw: 500, $lh: 0.91);
+}
+
+%txt-main-regular {
+  @include font($fz: 28px, $fw: 400, $lh: 1.57);
+}
+
+%opisanie-regular {
+  @include font($fz: 14px, $fw: 400, $lh: 1.29);
+}
+
+%opisanie-medium {
+  @include font($fz: 14px, $fw: 500, $lh: 1.29);
+}
+
+/* normalization */
+* {
+  box-sizing: border-box;
+}
+
+/* Для Page */
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+body {
+  font-family: $font-stack;
+  color: $black;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+li,
+ol,
+ul {
+  margin: 0;
+}
+
+input,
+button {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
