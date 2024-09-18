@@ -1,0 +1,24 @@
+@import '@/index';
+
+.button {
+  @extend %xl-txt-regular;
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &_type_passive {
+    padding: 0 0 8px;
+    color: $passive-text-dark;
+    letter-spacing: 0.4px;
+  }
+
+  &_type_active {
+    padding: 0 0 6px;
+    color: $blue-medium;
+    border-bottom: 2px solid $blue-medium;
+    letter-spacing: 0.5px;
+  }
+}

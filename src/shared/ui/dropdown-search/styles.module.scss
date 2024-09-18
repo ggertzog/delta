@@ -1,0 +1,29 @@
+@import '@/index';
+
+.dropdown {
+  position: relative;
+}
+
+.wrapper {
+  position: absolute;
+  display: none;
+  width: 100%;
+  background-color: $white;
+  padding: 6px 4px 15px;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  z-index: 2;
+}
+
+.content {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  position: relative;
+  background: $white;
+  transition: all 0.2s linear;
+}
+
+.wrapper_open {
+  display: block;
+}

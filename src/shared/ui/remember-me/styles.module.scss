@@ -1,0 +1,40 @@
+@import '@/index';
+
+.label {
+  @extend %main-regular;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  color: $passive-text-dark;
+  cursor: pointer;
+  width: fit-content;
+  gap: 12px;
+}
+
+.label input {
+  display: none;
+}
+
+.check {
+  height: 20px;
+  width: 20px;
+  border-radius: 2px;
+  background-color: $passive;
+
+  .svg {
+    display: none;
+  }
+
+  &-active {
+    box-sizing: border-box;
+    background-color: $blue-medium;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .svg {
+      display: block;
+    }
+  }
+}

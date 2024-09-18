@@ -1,0 +1,182 @@
+@import '@/index';
+
+@mixin disabled-filled {
+  background: $passive;
+  color: $passive-text;
+
+  &:hover {
+    background: $passive;
+    color: $passive-text;
+    cursor: auto;
+  }
+}
+
+@mixin disabled-transparent {
+  border: 2px solid $passive;
+  color: $passive-text;
+
+  &:hover {
+    border: 2px solid $passive;
+    color: $passive-text;
+    cursor: auto;
+  }
+}
+
+.button {
+  border: none;
+  border-radius: 32px;
+  font-family: $font-stack;
+
+  @extend %l-txt-regular;
+
+  transition: all 0.15s linear;
+  cursor: pointer;
+
+  /* Blue Button theme */
+  &_theme_blue {
+    color: $white;
+    background: $blue-standard;
+
+    &:hover {
+      background: $blue-medium;
+    }
+
+    &:active {
+      background: $blue-medium;
+      border: 2px solid $blue-dark;
+    }
+  }
+
+  &_disabled_blue {
+    @include disabled-filled;
+  }
+
+  &_pressed_blue {
+    border: 2px solid $blue-dark;
+  }
+
+  /* Transparent Button theme */
+  &_theme_transparent {
+    background: transparent;
+    color: $black;
+    border: 2px solid $blue-standard;
+
+    &:hover {
+      border: 2px solid $black;
+    }
+
+    &:active {
+      border: 2px solid $blue-dark;
+    }
+  }
+
+  &_disabled_transparent {
+    @include disabled-transparent;
+  }
+
+  &_pressed_transparent {
+    border: 2px solid $blue-dark;
+  }
+
+  /* Transparent Blue Button theme */
+  &_theme_transparent_blue {
+    background: transparent;
+    color: $blue-standard;
+    border: 2px solid $blue-standard;
+
+    &:hover {
+      color: $black;
+      border: 2px solid $black;
+    }
+
+    &:active {
+      border: 2px solid $blue-dark;
+      color: $black;
+    }
+  }
+
+  &_disabled_transparent_blue {
+    @include disabled-transparent;
+  }
+
+  &_pressed_transparent_blue {
+    border: 2px solid $blue-dark;
+    color: $black;
+  }
+
+  /* Black Button theme */
+  &_theme_black {
+    background: $black;
+    color: $white;
+
+    &:hover {
+      background: $blue-standard;
+    }
+
+    &:active {
+      background-color: $black;
+      border: 2px solid $blue-standard;
+    }
+  }
+
+  &_disabled_black {
+    @include disabled-filled;
+  }
+
+  &_pressed_black {
+    border: 2px solid $blue-standard;
+  }
+
+  /* Category Button theme */
+  &_theme_category {
+    background: transparent;
+    color: $black;
+    border: 1px solid $black;
+
+    @extend %main-regular;
+
+    &:hover {
+      background: $blue-medium;
+      color: $white;
+      border: 1px solid transparent;
+    }
+
+    &:active {
+      background: $black;
+      color: $white;
+      border: 1px solid transparent;
+    }
+  }
+
+  &_pressed_category {
+    background: $black;
+    color: $white;
+    border: none;
+  }
+
+  /* Button sizes */
+  &_default {
+    width: 256px;
+    height: 48px;
+  }
+
+  &_large {
+    width: 352px;
+    height: 48px;
+  }
+
+  &_fat {
+    width: 256px;
+    height: 64px;
+  }
+
+  &_category {
+    padding: 5px 20px;
+  }
+
+  &_add_to_cart {
+    width: 160px;
+    height: 78px;
+    padding: 0 10px;
+  }
+}

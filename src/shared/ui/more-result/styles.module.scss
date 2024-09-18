@@ -1,0 +1,27 @@
+@import '@/index';
+
+.container {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: $black;
+
+  .svg {
+    fill: $black;
+  }
+
+  &:hover,
+  &:focus-visible {
+    cursor: pointer;
+    color: $blue-medium;
+
+    .svg {
+      fill: $blue-medium;
+    }
+  }
+
+  .text {
+    @extend %xl-txt-medium;
+  }
+}

@@ -1,0 +1,43 @@
+@import '@/index';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1120px;
+  gap: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background: $almost-white-main;
+  border-radius: 32px;
+  padding: 0 96px 100px 0;
+  align-items: flex-end;
+}
+
+.container:nth-child(2) {
+  padding: 0 0 87px 61px;
+  align-items: flex-start;
+}
+
+.container:nth-child(3) {
+  padding-bottom: 110px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 544px;
+}
+
+.title {
+  @extend %txt-main-medium;
+
+  padding: 107px 0 48px;
+}
+
+.subtitle {
+  @extend %txt-main-regular;
+}
