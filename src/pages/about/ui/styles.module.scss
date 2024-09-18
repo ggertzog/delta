@@ -1,0 +1,10 @@
+@import '@/index';
+
+.main {
+  & > button {
+    margin: 60px auto 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
