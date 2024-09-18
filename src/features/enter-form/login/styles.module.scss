@@ -1,0 +1,38 @@
+@import '@/index';
+
+.input__title {
+  @extend %main-medium;
+
+  margin-bottom: 12px;
+}
+
+.password__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.forgot__password {
+  @extend %opisanie-regular;
+
+  color: $error;
+  cursor: pointer;
+}
+
+.rememberme__container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.button__container {
+  margin-top: 28px;
+}
+
+.password__error {
+  @extend %opisanie-medium;
+
+  color: $error;
+  text-align: center;
+  margin-top: 12px;
+}

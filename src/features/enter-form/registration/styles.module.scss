@@ -1,0 +1,28 @@
+@import '@/index';
+
+.inputs__container {
+  margin-top: 30px;
+}
+
+.input__title {
+  @extend %main-medium;
+
+  margin-bottom: 12px;
+}
+
+.button__container {
+  margin-top: 28px;
+}
+
+.license {
+  font-size: 14px;
+  margin-top: 24px;
+}
+
+.license span {
+  color: $passive-text;
+}
+
+.license a {
+  color: $blue-medium;
+}

@@ -1,0 +1,19 @@
+@import '@/index';
+
+.content {
+  margin-top: 34px;
+}
+
+.label {
+  @extend %main-medium;
+
+  margin-bottom: 10px;
+}
+
+.label:last-of-type {
+  margin-top: 13px;
+}
+
+.checked {
+  margin: 24px 0;
+}

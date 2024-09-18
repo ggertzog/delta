@@ -1,0 +1,57 @@
+@import '@/index';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  & > button {
+    padding: 18px 0;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.otp {
+  display: flex;
+  gap: 32px;
+}
+
+.input {
+  @extend %xl-txt-medium;
+
+  width: 64px;
+  height: 64px;
+  padding: 26px;
+  border-radius: 50%;
+  outline: none;
+  color: $passive-text-dark;
+  border: 1px solid $passive;
+
+  &::placeholder {
+    color: $passive;
+  }
+
+  &:focus {
+    border-color: $gray;
+  }
+
+  &_error {
+    border-color: $error;
+  }
+
+  &_success {
+    border-color: $green;
+  }
+}
+
+.error {
+  @extend %opisanie-medium;
+
+  color: $error;
+}

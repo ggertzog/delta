@@ -1,0 +1,34 @@
+@import '@/index';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  & > p {
+    @extend %main-regular;
+
+    color: $gray-light;
+  }
+
+  & > button {
+    @extend %main-medium;
+
+    width: fit-content;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: $blue-medium;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:disabled {
+      opacity: 1;
+      cursor: not-allowed;
+    }
+  }
+}

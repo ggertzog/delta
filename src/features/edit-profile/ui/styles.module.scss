@@ -1,0 +1,29 @@
+@import '@/index';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fieldset {
+  border: none;
+  margin: 0;
+}
+
+.legend {
+  margin-bottom: 6px;
+  @extend %main-medium;
+}
+
+.fieldset,
+.legend {
+  padding: 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 20px;
+}
