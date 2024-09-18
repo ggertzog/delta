@@ -1,0 +1,52 @@
+@import '@/index';
+
+.card {
+  max-width: 1120px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.photo {
+  width: 160px;
+  height: 100px;
+  border-radius: 32px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.name {
+  @extend %link-text;
+
+  width: fit-content;
+
+  &::after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid black;
+    margin-top: -3.5px;
+  }
+}
+
+.info {
+  display: flex;
+  gap: 16px;
+}
+
+.title {
+  @extend %main-medium;
+}
+
+.value {
+  @extend %main-regular;
+}
+
+.price {
+  @extend %xxl-txt-bold;
+
+  margin-left: auto;
+}

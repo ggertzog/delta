@@ -1,0 +1,37 @@
+@import '@/index';
+
+.container {
+  margin: 0 auto;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.figcaption {
+  margin: 10px 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.heading {
+  @extend %main-medium;
+
+  text-align: center;
+  width: 342px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.quantity {
+  @extend %main-regular;
+}
+
+.image {
+  max-width: 64px;
+  max-height: 64px;
+}

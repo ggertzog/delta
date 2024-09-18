@@ -1,0 +1,42 @@
+@import '@/index';
+
+.drop-down {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.wrapper {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.button {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.button_opened svg {
+  transform: rotate(90deg);
+}
+
+.title {
+  @extend %main-medium;
+}
+
+.content {
+  @extend %main-regular;
+
+  display: block;
+  font-family: inherit;
+  margin: 0;
+}
+
+.content_hidden {
+  display: none;
+}

@@ -1,0 +1,64 @@
+@import '@/index';
+
+.product {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  max-width: 1120px;
+  margin: 0 auto;
+
+  .name {
+    @extend %xl-txt-medium;
+  }
+
+  .quantity {
+    @extend %xl-txt-regular;
+  }
+
+  .name,
+  .quantity {
+    cursor: pointer;
+
+    &:hover {
+      color: $blue-medium;
+    }
+  }
+
+  .detail {
+    @extend %opisanie-medium;
+  }
+
+  .text {
+    @extend %opisanie-regular;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex-grow: 1;
+    min-width: 350px;
+
+    .top-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bottom-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
+  .side-container {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    align-items: center;
+  }
+}
