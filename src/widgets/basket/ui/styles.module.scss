@@ -1,0 +1,40 @@
+@import '@/index';
+
+.basket {
+  padding: 56px 48px;
+  width: fit-content;
+  max-height: 698px;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  background: $almost-white-main;
+}
+
+.basket_large {
+  width: 100vw;
+  margin: 0 auto;
+  padding: 62px 48px;
+  height: 388px;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.basket__product {
+  width: 100%;
+  max-height: 412px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden auto;
+  gap: 32px;
+}
+
+.basket__product_large {
+  min-width: 90vw;
+  flex-direction: row;
+  overflow: auto hidden;
+  max-width: 1120px;
+  gap: 32px;
+}

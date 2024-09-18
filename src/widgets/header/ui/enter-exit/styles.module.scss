@@ -1,0 +1,21 @@
+@import '@/index';
+
+.container {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: $black;
+
+  .svg {
+    fill: $black;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .text {
+    @extend %main-regular;
+  }
+}

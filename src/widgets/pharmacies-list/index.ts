@@ -1,0 +1,1 @@
+export { PharmaciesList } from './ui';

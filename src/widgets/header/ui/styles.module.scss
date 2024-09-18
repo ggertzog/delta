@@ -1,0 +1,40 @@
+@import '@/index';
+
+.header {
+  height: 100%;
+
+  &__logo {
+    color: $black;
+  }
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.nav {
+  &__list {
+    padding: 0;
+    display: flex;
+    gap: 36px;
+  }
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__text {
+    @extend %main-regular;
+
+    color: $black;
+  }
+}

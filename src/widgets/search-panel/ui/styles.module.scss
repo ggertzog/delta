@@ -1,0 +1,90 @@
+@import '@/index';
+
+.search-panel {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba($color: #202020, $alpha: 60%);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  min-width: 1128px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.category-box {
+  margin-bottom: 27px;
+  display: flex;
+  gap: 15px;
+  z-index: 2;
+}
+
+.quantity-box {
+  padding: 0;
+  display: flex;
+  gap: 28px;
+  z-index: 2;
+}
+
+.form {
+  margin-top: 24px;
+  width: 1120px;
+  position: relative;
+  background-color: white;
+  border-radius: 32px;
+}
+
+.form-container {
+  height: 48px;
+  width: 100%;
+  padding: 12px 0 12px 30px;
+  border: 2px solid $blue-standard;
+  border-right: none;
+  box-sizing: border-box;
+  border-radius: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 4;
+}
+
+.form_opened {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 1128px;
+  border-radius: 28px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+
+  .form-container {
+    width: 1120px;
+    margin: 4px auto;
+  }
+}
+
+.form-box {
+  display: flex;
+  width: 60%;
+}
+
+.input {
+  @extend %l-txt-regular;
+
+  height: 24px;
+  border: none;
+  margin-left: 8px;
+  width: 60%;
+  caret-color: $blue-medium;
+}
